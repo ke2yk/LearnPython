@@ -1,5 +1,8 @@
 import winsound
 import time
+import os
+
+os.system('clear')
 
 # Morse code dictionary
 morse_code = {
@@ -38,8 +41,4 @@ print(f"Morse code: {morse_output}")
 
 play_morse_code(morse_output)
 #Morse Code Translator
- 
-import os
-
-os.system('clear')
 
