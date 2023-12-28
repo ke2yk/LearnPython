@@ -1,0 +1,45 @@
+/* Resetting default margins and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #f2f2f2;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Styling for the content section */
+.content {
+    margin-left: 220px; /* Adjust this value based on your sidebar width */
+    padding: 20px;
+}
+
+/* Style for the heading */
+.content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learn Python - Home</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            {% for page in pages %}
+                <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="content">
+        <h1>Welcome to Python Hell!</h1>
+        <a href="/calendar">Calendar</a>
+        <a href="/">Home</a>
+    </div>
+</body>
+</html>
