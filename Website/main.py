@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 
+#Flask is cool
+
 app = Flask(__name__)
 
 # Data for pages
