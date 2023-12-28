@@ -1,4 +1,6 @@
 Flask Notes
+https://youtu.be/xIgPMguqyws?si=qm2u2PBVHLHja7bN
+
 For anyone thinking how to pass context to HTML template as a python dictionary, you can do the following:
 
 # In python
