@@ -1,5 +1,3 @@
-Python Cheat Sheet
-
 Flask Notes
 For anyone thinking how to pass context to HTML template as a python dictionary, you can do the following:
 
