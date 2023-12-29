@@ -17,7 +17,7 @@ pages = [
 # Routes for different pages
 @app.route('/')
 def home():
-    return render_template('home.html', pages=pages)
+    return render_template('index.html', pages=pages)
 
 @app.route('/calendar')
 def calendar():
