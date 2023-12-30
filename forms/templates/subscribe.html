@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+<h1>Subscribe To My Newsletter</h1>
+<!--
+https://www.youtube.com/watch?v=Rxp3mkg2mRQ&ab_channel=Codemy.com 5.44
+-->
+<br></br>
+<form action="/form" method="POST">
+  <div class="form-group">
+    <input type="text" class="form-control" id="InputFirstName" aria-descridbeby="emailHelp" placeholder="First Name" name='first_name'>
+  </div>
+   <div class="form-group">
+    <input type="text" class="form-control" id="InputLastName" aria-describedby="emailHelp" placeholder="Last Name" name='last_name'>
+  </div>
+    <div class="form-group">
+    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"placeholder="Email Address" name='email'>
+   </div>
+ 
+   <button type="submit" class="btn btn-secondary">Sign in</button>
+</form>
+{% endblock %}
+</body>
+</html>
