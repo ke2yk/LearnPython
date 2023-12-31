@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, url_for, redirect
-
+from hamdb import hamdb
 #Flask is cool
 
 app = Flask(__name__)
 
 subscribers = []
+calldata = []
 
 # Routes for different pages
 @app.route('/')
@@ -16,6 +17,21 @@ def home():
 def suscribe():
     title = "subscribe to my newsletter"
     return render_template("subscribe.html", title=title) 
+
+@app.route('/gethaminfo')
+def gethaminfo():
+    title = "Enter Your QSL Information"
+    return render_template("gethaminfo.html", title=title) 
+
+@app.route('/showhaminfo', methods=["POST"])
+def showhaminfo():
+    hamdb()
+    title = "Thanks For Working W2AMC!"
+    callsign = request.form.get("callsign")
+    full_name = request.form.get("full_name")
+    email = request.form.get("email")
+    calldata.append(f"{callsign} {full_name} {email}")
+    return render_template("showhaminfo.html", title=title, calldata=callinfo) 
 
 @app.route('/form', methods=["POST"])
 def form():
