@@ -1,69 +1,69 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Add a New QSL {% endblock %}</h1>
+    <h1>{% block title %} Add a New Course {% endblock %}</h1>
 
     <form method="POST" action="/">
         {{ form.csrf_token }}
         <p>
-            {{ form.callsign.label }}
-            {{ form.callsign(size=10) }}
+            {{ form.title.label }}
+            {{ form.title(size=20) }}
         </p>
 
-        {% if form.callsign.errors %}
+        {% if form.title.errors %}
             <ul class="errors">
-                {% for error in form.callsign.errors %}
+                {% for error in form.title.errors %}
                     <li>{{ error }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
 
         <p>
-            {{ form.qsldate.label }}
-            {{ form.qsldate(size=14) }}
+            {{ form.description.label }}
         </p>
-        
-        {% if form.qsldate.errors %}
+        {{ form.description(rows=10, cols=50) }}
+
+        {% if form.description.errors %}
             <ul class="errors">
-                {% for error in form.qsldate.errors %}
+                {% for error in form.description.errors %}
                     <li>{{ error }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
 
         <p>
-            {{ form.qsltimehh.label }}
-            {{ form.qsltimehh(size=2) }}
-    
-
-        {% if form.qsltimehh.errors %}
-            <ul class="errors">
-                {% for error in form.qsltimehh.errors %}
-                    <li>{{ error }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-
-          {{ form.qsltimemm.label }}
-          {{ form.qsltimemm(size=2) }}
+            {{ form.price.label }}
+            {{ form.price() }}
         </p>
-            
-        {% if form.qsltimemm.errors %}
+
+        {% if form.price.errors %}
             <ul class="errors">
-                {% for error in form.qsltimemm.errors %}
+                {% for error in form.price.errors %}
                     <li>{{ error }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
 
         <p>
-            {{ form.qslmode.label }}
-            {{ form.qslmode(size=3) }}
+            {{ form.available() }} {{ form.available.label }}
         </p>
-        
-        {% if form.qslmode.errors %}
+
+        {% if form.available.errors %}
             <ul class="errors">
-                {% for error in form.qslmode.errors %}
+                {% for error in form.available.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <p>
+            {{ form.level.label }}
+            {{ form.level() }}
+        </p>
+
+        {% if form.level.errors %}
+            <ul class="errors">
+                {% for error in form.level.errors %}
                     <li>{{ error }}</li>
                 {% endfor %}
             </ul>
@@ -72,7 +72,6 @@
         <p>
             <input type="submit" value="Add">
         </p>
-
     </form>
 
 {% endblock %}

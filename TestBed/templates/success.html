@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Success {% endblock %}</h1>
+    <hr>
+    {% for qsl in qslinfo %}
+        <p> {{ qsl['callsign'] }}      </p>
+        <p> {{ qsl['date'] }} 	 	   </p>	
+        <p> {{ qsl['qsltimehh'] }}  :  
+            {{ qsl['qsltimemm'] }}     </p>
+        <p> {{ qsl['qslmode'] }}       </p>
+     <hr>
+    {% endfor %}
+
+{% endblock %}
