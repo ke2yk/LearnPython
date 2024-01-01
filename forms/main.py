@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request, url_for, redirect
-from hamdb import hamdb
+from hamdb import getcallinfo
 #Flask is cool
 
 app = Flask(__name__)
 
 subscribers = []
 calldata = []
+callinfo = []
+
 
 # Routes for different pages
 @app.route('/')
@@ -25,12 +27,12 @@ def gethaminfo():
 
 @app.route('/showhaminfo', methods=["POST"])
 def showhaminfo():
-    hamdb()
     title = "Thanks For Working W2AMC!"
     callsign = request.form.get("callsign")
     full_name = request.form.get("full_name")
     email = request.form.get("email")
-    calldata.append(f"{callsign} {full_name} {email}")
+    callinfo = getcallinfo(callsign)
+    #calldata.append(f"{callsign} {full_name} {email}")
     return render_template("showhaminfo.html", title=title, calldata=callinfo) 
 
 @app.route('/form', methods=["POST"])

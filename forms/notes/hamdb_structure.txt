@@ -1,0 +1,26 @@
+data = [
+    ('hamdb', {
+        'version': '1',
+        'callsign': {
+            'call': 'KE2YK',
+            'class': 'E',
+            'expires': '08/11/2032',
+            'status': 'A',
+            'grid': 'FN30nu',
+            'lat': '40.8389034',
+            'lon': '-72.8712326',
+            'fname': 'GARY',
+            'mi': 'P',
+            'name': 'UTZ',
+            'suffix': '',
+            'addr1': '507 STARLIGHT DRIVE',
+            'addr2': 'EAST YAPHANK',
+            'state': 'NY',
+            'zip': '11967',
+            'country': 'United States'
+        },
+        'messages': {
+            'status': 'OK'
+        }
+    })
+]

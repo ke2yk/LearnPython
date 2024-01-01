@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+<h3>Please Confirm Your Information!</h3>
+<!-- {{calldata}} -->
+
+<ul>
+
+{% for user in calldata.split("|") %}
+	<li>{{ user }} </li>
+{% endfor %}
+
+</ul>
+
+{% endblock %}
+
+</div>
+
+</body>
+</html>
