@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired
 
 from wtforms.validators import InputRequired, Length
 
+'''
 class CourseForm(FlaskForm):
     title = StringField('Title', validators=[InputRequired(),
                                              Length(min=10, max=100)])
@@ -16,6 +17,7 @@ class CourseForm(FlaskForm):
                        choices=['Beginner', 'Intermediate', 'Advanced'],
                        validators=[InputRequired()])
     available = BooleanField('Available', default='checked')
+'''
 
 class QslForm(FlaskForm):
     callsign = StringField('CallSign:', validators=[InputRequired(),

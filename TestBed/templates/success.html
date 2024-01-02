@@ -4,12 +4,13 @@
     <h1>{% block title %} Success {% endblock %}</h1>
     <hr>
     {% for qsl in qslinfo %}
-        <p> {{ qsl['callsign'] }}      </p>
-        <p> {{ qsl['date'] }} 	 	   </p>	
-        <p> {{ qsl['qsltimehh'] }}  :  
-            {{ qsl['qsltimemm'] }}     </p>
-        <p> {{ qsl['qslmode'] }}       </p>
+        <H3> Call: {{ qsl['callsign'] }} | QSL Date: {{ qsl['qsldate'] }} | QSL Time: {{ qsl['qsltimehh'] }}:{{ qsl['qsltimemm'] }} | QSL Mode: {{ qsl['qslmode'] }} 
+        </H3>
      <hr>
     {% endfor %}
 
+ {{ userinfo }}
+
 {% endblock %}
+
+{{ qslinfo }}
