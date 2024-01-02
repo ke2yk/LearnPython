@@ -1,0 +1,9 @@
+to do list for testbed project
+fix all cosmetics
+fix menu bar
+add try catch to hamdb.py
+figure out how to elminiate zeroth element of qslinfo
+figure out alerts
+update success to undo submit if incorrect (pop qslinfo)
+figure out how to write data to sqlite db
+figure out how to put the app in the public doman
