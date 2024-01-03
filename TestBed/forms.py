@@ -30,5 +30,7 @@ class QslForm(FlaskForm):
     qsltimemm = StringField(':', validators=[DataRequired(), Length(min=2, max=2)])
 
     modes = [('SSB', 'SSB'), ('CW', 'CW'), ('Digital', 'Digital')]
+
     qslmode = SelectField('Mode:', choices=modes, validators=[DataRequired()])
     
+    qslemail = StringField('Your Email', validators=[DataRequired(), Length(max=20)])

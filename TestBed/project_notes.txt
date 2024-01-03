@@ -1,12 +1,16 @@
 to do list for testbed project
 
-fix all cosmetics
-in progress fix nav bar
-add try catch to hamdb.py
+
 done figure out how to elminiate empty qslinfo dictionary entry
 done figure out alerts
 done fix validate to return to home page if user rejects input
 done add route to update the database if user accepts input
-add db calls to load db within process route
+done add db calls to load db within the process route
+done installed free sqlite studio
+done added email and status fields to application and table
+---------------
 in progress figure out how to work with sqlite
 figure out how to put the app in the public doman
+fix all cosmetics
+in progress fix nav bar
+add try catch to hamdb.py
