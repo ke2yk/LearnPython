@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Success {% endblock %}</h1>
+    <hr>
+    {% for qsl in qslinfo %}
+        {% if qsl %}
+            <H3> Call: {{ qsl['callsign'] }} | QSL Date: {{ qsl['qsldate'] }} | QSL Time: {{ qsl['qsltimehh'] }}:{{ qsl['qsltimemm'] }} | QSL Mode: {{ qsl['qslmode'] }} 
+            </H3>
+        {% endif %}
+     <hr>
+    {% endfor %}
+
+ {{ userinfo }}
+  
+    <form action="{{ url_for('process') }}">
+        <button type="submit" name="action" value="submit">Submit</button>
+        <button type="submit" name="action" value="reject">Reject</button>
+    </form>
+
+{% endblock %}
+
+{{ qslinfo }}

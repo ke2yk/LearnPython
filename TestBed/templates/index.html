@@ -9,7 +9,7 @@
             {{ form.callsign.label }}
             {{ form.callsign(size=10) }}
         </p>
-
+        
         {% if form.callsign.errors %}
             <ul class="errors">
                 {% for error in form.callsign.errors %}
@@ -71,6 +71,7 @@
 
         <p>
             <input type="submit" value="Add">
+            <input type="reset" value="Reset">
         </p>
 
     </form>
